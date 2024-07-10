@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<center>
+<h1>User Registrtion Detaills</h1>
+<form th:action="@{/registrationdetails}" th:object="${userdetails}">
+<input placeholder=" enter uour first name" th:field="*{firstname}"><br><br>
+<input placeholder=" enter uour last name" th:field="*{lastname}"><br><br>
+<input placeholder=" enter uour emailid" th:field="*{emailid}">
+<input th:value="${emailmsg}" style="color: red;"><br><br>
+<input placeholder=" enter your password" th:field="*{password}">
+<input th:value="${passwordmsg}" style="color: red;"><br><br>
+<input placeholder=" enter uour mobilenumber" th:field="*{mobilenumber}"><br>
+<input type="submit" value="register">
+</form>
+<h1 style="color:red" th:text="${msg}"></h1>
+</center>
+</body>
+</html>

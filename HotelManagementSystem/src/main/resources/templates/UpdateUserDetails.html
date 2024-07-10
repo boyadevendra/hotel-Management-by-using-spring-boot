@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<center>
+<form th:action="@{/updateUserDetailsHTMLPage}" th:object="${userdetails}">
+<input th:field="*{userid}" th:name="*{userid}" hidden="true">
+<input th:field="*{firstname}" th:name="*{firstname}"><br><br>
+<input th:field="*{lastname}" th:name="*{lastname}"><br><br>
+<input th:field="*{emailid}" th:name="*{emailid}"><br><br>
+<input th:field="*{password}" th:name="*{password}"><br><br>
+<input th:field="*{mobilenumber}" th:name="*{mobilenumber}"><br><br>
+<input type="submit" value="update">
+</form>
+</center>
+</body>
+</html>
